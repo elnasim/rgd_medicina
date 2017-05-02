@@ -1,0 +1,527 @@
+@import "fonts"
+@import "vars"
+
+*::-webkit-input-placeholder
+	color: #666
+	opacity: 1
+
+*:-moz-placeholder
+	color: #666
+	opacity: 1
+
+*::-moz-placeholder
+	color: #666
+	opacity: 1
+
+*:-ms-input-placeholder
+	color: #666
+	opacity: 1
+
+body input:focus:required:invalid,
+body textarea:focus:required:invalid
+	color: #666
+body input:required:valid,
+body textarea:required:valid
+	color: #666
+
+html, body
+	height: 100%
+
+body
+	font-size: 16px
+	min-width: 320px
+	position: relative
+	line-height: 1.75
+	font-family: $default-font
+	overflow-x: hidden
+	opacity: 1
+
+h3
+	font-size: 16px
+	color: #1275ac
+	margin-bottom: 24px
+
+::selection
+	background-color: $accent
+	color: #fff
+
+.img-responsive
+	display: block
+	max-width: 100%
+	height: auto
+
+.topline
+	padding: 16px 0 20px
+	position: relative
+
+.logo-img
+	margin-bottom: -7px
+
+.logo-description
+	font-size: 11px
+	line-height: 1.05
+	color: #006ca5
+
+.phone-wrapper
+	margin-left: 32px
+	margin-top: 18px
+
+.phone-icon, .phone-text, .entry-icon, .entry-text
+	display: table-cell
+
+.phone-icon
+	margin-top: 2px
+
+.phone-text
+	vertical-align: top
+	text-transform: uppercase
+	color: #fd1527
+	font-size: 15px
+	padding-left: 12px
+	span
+		font-size: 24px
+		line-height: 1
+		display: block
+		margin-bottom: 2px
+
+.entry-wrapper
+	margin-left: 37px
+	margin-top: 18px
+	display: block
+
+.entry-text
+	vertical-align: top
+	color: #1275ac
+	font-size: 15px
+	padding-left: 8px
+	line-height: 1
+	a
+		display: block
+		margin-top: 2px
+		&:hover
+			color: #1275ac
+
+.socials
+	text-align: right
+	margin-top: 22px
+.lk
+	font-size: 12px
+	a
+		color: #1275ac
+		text-decoration: underline
+		&:hover
+			text-decoration: none
+
+.social-icons
+	font-size: 21px
+	color: #1275ac
+	a
+		margin-left: 9px
+		&:hover
+			color: darken(#1275ac, 3%)
+
+.top-menu
+	background-color: #EE051A
+	position: relative
+
+.main-menu
+	ul
+		list-style-type: none
+		padding: 0
+		margin: 0
+		li
+			display: inline-block
+			margin-right: 34px
+			&.active
+				border-top: 3px solid #fff
+			a
+				color: #fff
+				display: block
+				padding: 2px 6px 8px
+				font-size: 14px
+				&:hover, &:focus, &:active
+					text-decoration: none
+
+.search
+	text-align: right
+	font-size: 20px
+	a
+		color: #fff
+
+//toggle-menu
+.toggle-mnu
+  display: block
+  width: 28px
+  height: 28px
+  margin-top: 8px
+  margin-left: 5px
+  position: absolute
+  z-index: 5
+
+  span:after, span:before 
+    content: ""
+    position: absolute
+    left: 0
+    top: 9px
+
+  span:after
+    top: 18px
+
+  span 
+    position: relative
+    display: block
+
+  span, span:after, span:before
+    width: 100%
+    height: 2px
+    background-color: #fff
+    transition: all 0.3s
+    backface-visibility: hidden
+    border-radius: 2px
+
+
+  &.on span 
+    background-color: transparent
+
+  &.on span:before 
+    transform: rotate(45deg) translate(-1px, 0px)
+
+  &.on span:after 
+    transform: rotate(-45deg) translate(6px, -7px)
+
+.hidden-menu
+	display: none
+	text-align: center
+	ul
+		list-style-type: none
+		padding-left: 0
+		margin-bottom: 0
+		li
+			display: block
+			&.active
+				background-color: #fff
+				a
+					color: $accent
+			&:hover, &:focus, &:active
+				background-color: #fff
+				a
+					color: $accent
+					text-decoration: none
+			a
+				color: #fff
+				display: block
+				padding: 10px 0
+				&:focus, &:active
+					text-decoration: none
+
+.slider
+	background-color: #F6F6F6
+	text-align: center
+	line-height: 0.9
+	border-bottom: 1px solid #d2d3d4
+	.slider-wrapper
+		display: inline-block
+.fotorama__wrap 
+	.fotorama__pointer
+		cursor: default
+.fotorama__arr--prev
+	background-image: url(../img/slider/arrow-left.png)
+	background-size: auto
+	width: 63px
+	height: 63px
+	background-color: rgba(#424242, 0.5)
+	margin-left: -2px
+	margin-top: -50px
+	background-position: center
+	&:hover
+		background-color: rgba(#424242, 0.7)
+
+.fotorama__arr--next
+	background-image: url(../img/slider/arrow-right.png)
+	background-size: auto
+	width: 63px
+	height: 63px
+	background-color: rgba(#424242, 0.5)
+	margin-right: -2px
+	margin-top: -50px
+	background-position: center
+	&:hover
+		background-color: rgba(#424242, 0.7)
+
+.slideItem__content
+	position: absolute
+	top: 17%
+	left: 16%
+
+.slideItem__head, .slideItem__desc
+	display: block
+
+.slide__item__description
+	text-align: left
+	width: 509px
+	height: 169px
+	background-color: $blue
+	color: #fff
+	padding: 14px 28px
+	margin-bottom: 16px
+	.slideItem__head
+		font-size: 40px
+		margin-bottom: 12px
+	.slideItem__desc
+		font-size: 24px
+		margin-bottom: 18px
+	p
+		font-size: 13px
+		line-height: 20px
+
+.slideItem__button
+	text-align: left
+	text-transform: uppercase
+	box-shadow: 0 3px 15px 2px rgba(#6a6969, .75)
+	float: left
+	a
+		background-color: $accent
+		display: inline-block
+		color: #fff
+		padding: 20px 55px
+		&:hover, &:focus, &:active
+			text-decoration: none
+
+.services
+	padding: 35px 0 20px
+	background-image: url(../img/services/bg.jpg)
+	background-position: center
+	border-bottom: 1px solid #e0e0e0
+	position: relative
+	&::before
+		content: ''
+		background-color: #fff
+		opacity: 0.97
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+.services__item
+	margin-bottom: 15px
+
+.item-img, .item-content
+	display: table-cell
+	vertical-align: middle
+
+.item-content
+	width: 100%
+	background-color: $blue
+	padding: 0 10px 0 20px
+	color: #fff
+	transition: all .25s ease
+	font-size: 15px
+	&:hover, &:focus, &:active
+		color: #fff
+		background-color: $accent
+		text-decoration: none
+		cursor: pointer
+
+.about
+	padding: 30px 0
+	border-bottom: 1px solid #e0e0e0
+
+.about__content
+	border: 1px solid #e0e0e0
+	padding-bottom: 18px
+
+.about__text
+	padding: 0 24px
+	font-size: 13px
+	color: #606060
+	margin-bottom: 20px
+
+.about__button
+	text-align: center
+	display: block
+	a
+		box-shadow: 0 3px 15px 2px rgba(#6a6969, .75)
+		background-color: $blue
+		display: inline-block
+		color: #fff
+		padding: 15px 61px
+		font-size: 16px
+		&:hover, &:focus, &:active
+			text-decoration: none
+
+.actions
+	padding: 50px 0 28px
+	background-color: #F8F9F9
+
+.actions__head
+	margin-bottom: 38px
+	color: #1275ac
+	font-size: 24px
+	img
+		margin-right: 16px
+
+.actions-left__content__item
+	margin-bottom: 22px
+
+.actions-left__content__item__img, .actions-left__content__item__desc
+	display: table-cell
+	vertical-align: middle
+
+.actions-left__content__item__desc
+	width: 318px
+	background-color: #E37713
+	padding: 0 20px
+	cursor: pointer
+	&:hover
+		text-decoration: none
+
+.item__descTwo
+	background-color: #34AD31
+
+.desc__head, .desc__text, .desc__date
+	display: block
+	color: #fff
+
+.desc__head
+	font-size: 19px
+
+.desc__text
+	font-size: 12px
+
+.desc__date
+	font-size: 16px
+
+.actions-right__content
+	line-height: 1.3
+	ul
+		margin: 0 0 24px
+		padding: 0
+		list-style-type: none
+		li
+			margin-bottom: 13px
+			a
+				color: #1275ac
+				&:hover
+					color: #ff1527
+					text-decoration: none
+	.all_news
+		font-size: 12px
+		a
+			display: inline-block
+			&:hover
+				color: #ff1527
+.action-right__content__date
+	display: block
+	font-size: 13px
+
+.reception
+	color: #fff
+	background-color: #2f86b6
+	position: relative
+	padding: 30px 0
+	&::before
+		content: ''
+		background-image: url(../img/reception/bg.jpg)
+		opacity: .1
+		background-position: center 30%
+		background-size: cover
+		width: 100%
+		height: 100%
+		position: absolute
+		top: 0
+		left: 0
+
+.reception__phone__left, .reception__phone__right, .reception__entry__left, .reception__entry__right
+	display: table-cell
+	vertical-align: middle
+	line-height: 1.2
+
+.receprion__phone
+	margin-left: -20px
+	margin-top: 10px
+
+.reception__phone__right
+	font-size: 15px
+	padding-left: 14px
+	text-align: center
+
+.reception__phone__number
+	font-size: 24px
+
+.reception__entry
+	border: 2px solid #fefefe
+	display: inline-block
+	padding: 14px 26px
+	a
+		color: #fff
+
+.reception__entry__right
+	font-size: 15px
+	padding-left: 14px
+
+.partners
+	padding: 30px 0
+	background-color: #F7F7F7
+	border-bottom: 1px solid #e0e0e0
+
+.partners__secondItem, .partners__thirdItem
+	text-transform: uppercase
+	font-size: 10px
+
+.partners__thirdItem
+	margin-top: -4px
+
+.partners__secondItem__left, .partners__secondItem__right, .partners__thirdItem__left, .partners__thirdItem__right
+	display: table-cell
+	vertical-align: middle
+	line-height: 1
+
+.partners__secondItem__right, .partners__thirdItem__right
+	padding-left: 6px
+
+.footer
+	padding: 30px 0 0
+	background-color: #F3F3F4
+
+.footer__logo
+	font-size: 11px
+	line-height: 1.3
+
+.footer__nav
+	float: right
+	font-size: 14px
+	margin-top: 23px
+	ul
+		margin: 0
+		padding: 0
+		list-style-type: none
+		li
+			display: inline-block
+			margin: 0 7px
+			a
+				color: #77787b
+				&:hover, &:active
+					color: #77787b
+					text-decoration: none
+
+.footer__bottom-line
+	color: #8c8989
+	margin-top: 30px
+	padding: 15px 0
+	background-color: #3D3D3D
+	p
+		font-size: 12px
+		margin-bottom: 0
+		margin-top: 5px
+
+.footer__bottom-line__socials
+	float: right
+	a
+		color: #8c8989
+		display: inline-block
+		margin: 0 3px
+		
+
+
+@import "media" // Всегда в конце
